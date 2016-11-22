@@ -17,9 +17,9 @@ $date = isset($message['date']) ? $message['date'] : "";
 $text = isset($message['text']) ? $message['text'] : "";
 
 $text = trim($text);
-$text = strtolower($text);
+//$text = strtolower($text);
 
-//$text = "fanculo"
+$text = "fanculo"
 header("Content-Type: application/json");
 $parameters = array('chat_id' => $chatId, "text" => $text);
 $parameters["method"] = "sendMessage";
