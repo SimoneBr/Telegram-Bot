@@ -26,3 +26,4 @@ header("Content-Type: application/json");
 $parameters = array('chat_id' => $chatId, "photo" => $text);
 $parameters["method"] = "sendPhoto";
 echo json_encode($parameters);
+echo $text;
