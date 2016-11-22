@@ -19,10 +19,8 @@ $text = isset($message['text']) ? $message['text'] : "";
 $text = trim($text);
 //$text = strtolower($text);
 
-$text ='http://www.letsgodigital.org/images/artikelen/35/d90-test-photo.jpg'
+$text ='fanculo'
 header("Content-Type: application/json");
-//$parameters = array('chat_id' => $chatId, "text" => $text);
-//$parameters["method"] = "sendMessage";
-$parameters = array('chat_id' => $chatId, "photo" => $text);
-$parameters["method"] = "sendPhoto";
+$parameters = array('chat_id' => $chatId, "text" => $text);
+$parameters["method"] = "sendMessage";
 echo json_encode($parameters);
