@@ -1,4 +1,5 @@
 <?php
+ini_set('display_errors', 'On');
 $content = file_get_contents("php://input");
 $update = json_decode($content, true);
 
