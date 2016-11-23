@@ -25,6 +25,5 @@ $text = "http://www.lastampa.it/rf/image_lowres/Pub/p4/2016/11/21/Esteri/Foto/Ri
 header("Content-Type: application/json");
 $parameters = array('chat_id' => $chatId, "photo" => $text);
 $parameters["method"] = "sendPhoto";
-echo $text;
 echo json_encode($parameters);
 
