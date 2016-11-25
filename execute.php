@@ -20,10 +20,18 @@ $text = isset($message['text']) ? $message['text'] : "";
 //$text = trim($text);
 //$text = strtolower($text);
 
-if( $text ==='/trump' )
-  $text = "http://www.lastampa.it/rf/image_lowres/Pub/p4/2016/11/21/Esteri/Foto/RitagliWeb/TrumpHealthCareLawJPEG-701cf_1479755911-kLIC-U1090184008278543C-1024x576@LaStampa.it.jpg";
 header("Content-Type: application/json");
-$parameters = array('chat_id' => $chatId, "photo" => $text);
-$parameters["method"] = "sendPhoto";
-echo json_encode($parameters);
+if( $text ==='/trump' ){
+  $text = "http://www.lastampa.it/rf/image_lowres/Pub/p4/2016/11/21/Esteri/Foto/RitagliWeb/TrumpHealthCareLawJPEG-701cf_1479755911-kLIC-U1090184008278543C-1024x576@LaStampa.it.jpg";
+  $parameters = array('chat_id' => $chatId, "photo" => $text);
+  $parameters["method"] = "sendPhoto";
+  echo json_encode($parameters);
+}
+if( $text === '/wiki' ){
+  $text = "https://it.wikipedia.org/wiki/Speciale:PaginaCasuale";
+  $parameters = array('chat_id' => $chatId, "text" => $text);
+  $parameters["method"] = "sendMessage";
+  echo json_encode($parameters);
+}
+
 
